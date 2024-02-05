@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASR Attack Capstone</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #1e88e5;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            color: #ffffff;
+            font-size: 2em;
+        }
+
+        h3 {
+            margin-top: 5px;
+            color: #ffffff;
+            font-size: 1.2em;
+        }
+
+        .members {
+            background-color: #263238;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .members h2 {
+            color: #ffffff;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .members p {
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .members ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .members li {
+            margin-bottom: 8px;
+        }
+
+        .paragraph {
+            background-color: #37474f;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .paragraph h2 {
+            color: #ffffff;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .paragraph p {
+            margin-bottom: 0;
+        }
+
+        .resources {
+            background-color: #455a64;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .resources h2 {
+            color: #ffffff;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .resources ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .resources li {
+            margin-bottom: 8px;
+        }
+
+        .resources a {
+            color: #bbdefb;
+            text-decoration: none;
+        }
+
+        .resources a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>ASR Attack</h1>
+        <h3>Group 4</h3>
+    </header>
+
+    <section class="members">
+        <h2>Class</h2>
+        <p>CS 426 Senior Project in Computer Science, Spring 2023, at UNR, CSE Department</p>
+
+        <h2>Professors</h2>
+        <ul>
+            <li>David Feil-Seifer</li>
+            <li>Devrin Lee</li>
+            <li>Sara Davis</li>
+        </ul>
+
+        <h2>Advisor</h2>
+        <ul>
+            <li>Dr. Rui Hu - Assistant Professor in the Department of Computer Science & Engineering at the University of Nevada, Reno</li>
+            <li>Chase Carthen - Research Data Architect</li>
+        </ul>
+
+        <h2>Group Members</h2>
+        <ul>
+            <li>Kristian Konstantinov</li>
+            <li>Zachary Strazi</li>
+            <li>Cody Long</li>
+            <li>Jacob Ayers</li>
+        </ul>
+    </section>
+
+    <section class="paragraph">
+        <h2>About Us</h2>
+        <p>Technology has advanced vastly over the past 20 years to the point where many devices take advantage of smart voice technology, from phones to physical devices that sit in your home and provide help with different tasks. These devices rely on Automatic Speech Recognition (ASR) to identify keywords and phrases that trigger their functionality. Our project aim is to create Adversarial Examples (AE) that can be played concurrently while an auditory command is given to ASR devices and cause them to misclassify the given command. This will be done by first fine-tuning the Wav2Vec2 preexisting model from Hugging Face using Parameter Efficient Fine Tuning (PEFT) methods to get a more efficient model for processing speech that we can test AEs against. By perturbing the LibriSpeech audio files by a fraction, we will create our adversarial examples and attack the Wav2Vec2, as well as the Kaldi and Whisper models to determine how efficient the AE’s are. We will then test our AE’s on APIs like Google and Amazon Alexa to cause a misclassification in command. To deliver the attacks, the team plans on using a Raspberry Pi device to listen for the trigger phrase and play the AE at the same time a user gives a command. The ASR device will then receive the user input as well as the AE simultaneously and misclassify the command.</p>
+    </section>
+
+    <section class="resources">
+        <h2>Related Resources</h2>
+        <ul>
+            <li>Abdullah, H., Rahman, M. S., Garcia, W., Warren, K., Yadav, A. S., Shrimpton, T., & Traynor, P. (2021). Hear “no evil”, see “kenansville”:</br> Efficient and transferable black-box attacks on speech recognition and Voice Identification Systems. 2021 IEEE Symposium on Security and Privacy (SP). <a href="https://doi.org/10.1109/sp40001.2021.00009" target="_blank">IEEE</a></li>
+            </br>
+            <li>Carlini N, Wagner D. Audio Adversarial Examples:</br> Targeted Attacks on Speech-to-Text. IEEE Xplore. <a href="doi:https://doi.org/10.1109/SPW.2018.00009" target="_blank">IEEE</a></li>
+            </br>
+            <li>Y. Chen, X. Yuan, J. Zhang, Y. Zhao, S. Zhang, K. Chen, and X. Wang, “Devil’s whisper:</br> A general approach for physical adversarial attacks against commercial black-box speech recognition devices,” in 29th USENIX Security Symposium (USENIX Security 20), 2020.</li>
+            </br>
+        </ul>
+    </section>
+</body>
+
+</html>
