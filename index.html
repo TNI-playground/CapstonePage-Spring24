@@ -179,6 +179,28 @@
             <p><a href="https://docs.google.com/document/d/18ucTqCq3Kz_oeOWO7RPa5KTug_7lAcLYTi-8xzEi8Hk/edit?usp=sharing">Part 3 Acceptance Criteria and Testing Plan Cs 426</a></p>
             <p><a href="https://docs.google.com/document/d/1hfUZDyuW_Y0cR3KxJ2C0SOCGZYbtwxaO6NQaqbBujoA/edit?usp=sharing">Part 4 Project Progress Demo Cs 426</a></p>
         </ul>
+        <h2>Attack Methods</h2>
+        <ul>
+        <h3>FFT (Fast Fourier Transformation)</h3>
+        <p>FFT in an algorithm that calculates the DFT (Discrete Fourier Transformation) of a series. Any signal can be represented by a series of sine functions that add up to the original signal. The DFT is used to extract frequency information about audio in any ASR (Automatic Speech Recognition) System. Allows a vector of attack where certain frequency ranges can be downplayed that would be less perceivable to people while causing misclassifications for ASR systems.</p>
+        <h4> Spectrogram of original audio vs FFT audio</h2>
+        <img src="Screenshot (452).png" width="400" height="200" alt="Example Image">
+        <ul>
+        <h3>SSA (Singular Spectrum Analysis)</h3>
+        <p>Deconstructs a time series into a few smaller subsets of components that represent various trends and noise that can be summed back into the original data or certain subsets can be isolated or removed from the time series including the noise. Lowering the intensity of frequencies less perceptible to the human ear can allow for misclassifications by ASR systems while the overall audio is still perceivable to people.</p>
+        <h4> Spectrogram of original audio vs DCT audio</h2>
+        <img src="Screenshot (455).png" width="400" height="200" alt="Example Image">
+        <ul>
+        <h3>DCT (Discrete Cosign Transformation)</h3>
+        <p>Algorithm for compression where low energy parts can be discarded. Maintaining the coefficients that sum to the most significant part of the signal's energy. Maintaining these parts makes the original audio still perceivable, while more noisy, but requires less overall information. In our case the intensity of these low energy parts can be manipulated in order to generate a misclassification in ASR system while being perceivable to people.</p>
+        <h4> Spectrogram of original audio vs SSA audio</h2>
+        <img src="Screenshot (454).png" width="400" height="200" alt="Example Image">
+        <ul>
+        <h3>Overlay</h3>
+        <p>Method of attack consisting of combining two different sources of audio on top of each other in order to produce a misclassification by ASR systems.</p>
+        <h4> Spectrogram of original audio vs Overlay audio</h2>
+        <img src="Screenshot (447).png" width="400" height="200" alt="Example Image">
+        </ul>
     </section>
 </body>
 
