@@ -106,6 +106,67 @@
         .resources a:hover {
             text-decoration: underline;
         }
+        .assignments {
+          background-color: #818589;
+          padding: 20px;
+          border-radius: 10px;
+          margin-top: 20px;
+        }
+  
+        .assignments h2 {
+            color: #ffffff;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+  
+        .assignments ul {
+            list-style-type: none;
+            padding: 0;
+        }
+  
+        .assignments li {
+            margin-bottom: 8px;
+        }
+  
+        .assignments a {
+            color: #bbdefb;
+            text-decoration: none;
+        }
+  
+        .assignments a:hover {
+            text-decoration: underline;
+        }
+        .methods {
+          background-color: #53565a;
+          padding: 20px;
+          border-radius: 10px;
+          margin-top: 20px;
+        }
+
+        .methods h2 {
+            color: #ffffff;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .methods ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .methods li {
+            margin-bottom: 8px;
+        }
+
+        .methods a {
+            color: #bbdefb;
+            text-decoration: none;
+        }
+
+        .methods a:hover {
+            text-decoration: underline;
+        }
+        
     </style>
 </head>
 
@@ -144,7 +205,7 @@
 
     <section class="paragraph">
         <h2>About Us</h2>
-        <p>Many devices today rely on Automatic Speech Recognition (ASR) to identify keywords and phrases that trigger their functionality. Our project aim is to create Adversarial Examples (AE) that can be created by using methods of perturbing audio and then concurrently playing them while an auditory command that is given to ASR devices and cause them to misclassify the given command. First we attacked the Wav2Vec2 model, as well as the Whisper model to determine how efficient the AE’s are at causing a misclassification. We then tested our AE’s on APIs like Google, Amazon and DeepSpeech to cause a misclassification in a given command. To deliver the attacks, we used a Raspberry Pi device to listen for the trigger phrase and play the AE at the same time a user gives a command. The ASR device will then receive the user input as well as the AE simultaneously and misclassify the command.</p>
+        <p>Technology has advanced vastly over the past 20 years to the point where many devices take advantage of smart voice technology, from phones to physical devices that sit in your home and provide help with different tasks. These devices rely on Automatic Speech Recognition (ASR) to identify keywords and phrases that trigger their functionality. Our project aim is to create Adversarial Examples (AE) that can be played concurrently while an auditory command is given to ASR devices and cause them to misclassify the given command. This will be done by first fine-tuning the Wav2Vec2 preexisting model from Hugging Face using Parameter Efficient Fine Tuning (PEFT) methods to get a more efficient model for processing speech that we can test AEs against. By perturbing the LibriSpeech audio files by a fraction, we will create our adversarial examples and attack the Wav2Vec2, as well as the Kaldi and Whisper models to determine how efficient the AE’s are. We will then test our AE’s on APIs like Google and Amazon Alexa to cause a misclassification in command. To deliver the attacks, the team plans on using a Raspberry Pi device to listen for the trigger phrase and play the AE at the same time a user gives a command. The ASR device will then receive the user input as well as the AE simultaneously and misclassify the command.</p>
     </section>
 
     <section class="resources">
@@ -189,18 +250,19 @@
         <p>FFT in an algorithm that calculates the DFT (Discrete Fourier Transformation) of a series. Any signal can be represented by a series of sine functions that add up to the original signal. The DFT is used to extract frequency information about audio in any ASR (Automatic Speech Recognition) System. Allows a vector of attack where certain frequency ranges can be downplayed that would be less perceivable to people while causing misclassifications for ASR systems.</p>
         <h4> Spectrogram of original audio vs FFT audio</h2>
         <img src="Screenshot (452).png" width="400" height="200" alt="Example Image">
+        <p><a href="https://drive.google.com/file/d/1squCHy2swBzdj261gpoopIZROvo1psdO/view?usp=sharing">FFT EX. 1</a></p>
         <h3>SSA (Singular Spectrum Analysis)</h3>
         <p>Deconstructs a time series into a few smaller subsets of components that represent various trends and noise that can be summed back into the original data or certain subsets can be isolated or removed from the time series including the noise. Lowering the intensity of frequencies less perceptible to the human ear can allow for misclassifications by ASR systems while the overall audio is still perceivable to people.</p>
         <h4> Spectrogram of original audio vs DCT audio</h2>
-        <img src="Screenshot (455).png" width="400" height="200" alt="Example Image">
+        <img src="Screenshot (452).png" width="400" height="200" alt="Example Image">
         <h3>DCT (Discrete Cosign Transformation)</h3>
         <p>Algorithm for compression where low energy parts can be discarded. Maintaining the coefficients that sum to the most significant part of the signal's energy. Maintaining these parts makes the original audio still perceivable, while more noisy, but requires less overall information. In our case the intensity of these low energy parts can be manipulated in order to generate a misclassification in ASR system while being perceivable to people.</p>
         <h4> Spectrogram of original audio vs SSA audio</h2>
-        <img src="Screenshot (454).png" width="400" height="200" alt="Example Image">
+        <img src="Screenshot (452).png" width="400" height="200" alt="Example Image">
         <h3>Overlay</h3>
         <p>Method of attack consisting of combining two different sources of audio on top of each other in order to produce a misclassification by ASR systems.</p>
         <h4> Spectrogram of original audio vs Overlay audio</h2>
-        <img src="Screenshot (447).png" width="400" height="200" alt="Example Image">
+        <img src="Screenshot (452).png" width="400" height="200" alt="Example Image">
         </ul>
     </section>
 </body>
